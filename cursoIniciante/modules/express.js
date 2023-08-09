@@ -18,7 +18,8 @@ app.use((req, res, next) => {
 })
 
 app.get('/views/users', async (req, res) => {
-    res.render('index.ejs')
+    const users = await UserModel.find({ })
+    res.render('index.ejs', {users})
 })
 
 app.get("/home", (req, res) => {
