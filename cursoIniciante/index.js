@@ -1,10 +1,22 @@
-const {Person} = require('./person')
+// const {Person} = require('./person')
+const dotenv = require('dotenv')
+const connectToDatabase = require('./src/database/connect')
+
+dotenv.config()
+
+connectToDatabase()
+
+
+
 
 //modulo path
 // require("./modules/path")
 // require('./modules/fs')
-require('./modules/http')
+// require('./modules/http')
 
-const person = new Person('Arthur')
 
-console.log(person.sayMyName())  
+require('./modules/express')
+
+// const person = new Person('Arthur')
+
+// console.log(person.sayMyName())  
