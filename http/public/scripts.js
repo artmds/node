@@ -2,6 +2,14 @@ const ul = document.querySelector("ul")
 const input = document.querySelector("input")
 const form = document.querySelector('form')
 
+async function load(){
+    const res = await fetch("http://localhost:4000").then((data) => data.json())
+
+    res.url.map(url => addElement(url))
+}
+
+load()
+
 
 function addElement({ name, url }) {
     const li = document.createElement('li')

@@ -10,8 +10,4 @@ const connectToDatabase = async () =>{
     .catch((err) => console.log(err));
 }
 
-// app.listen(8080, () => {
-//     console.log('na porta 8080')
-// })
-
 module.exports = connectToDatabase
